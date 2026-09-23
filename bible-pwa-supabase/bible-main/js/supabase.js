@@ -1,0 +1,1 @@
+(() => { const c=window.APP_CONFIG; if(!c||c.SUPABASE_URL.includes("YOUR_PROJECT")||c.SUPABASE_PUBLISHABLE_KEY.includes("YOUR_")){ window.db=null; return; } window.db=supabase.createClient(c.SUPABASE_URL,c.SUPABASE_PUBLISHABLE_KEY); })();
