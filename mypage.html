@@ -1,1 +1,26 @@
+async function checkLogin() {
 
+    const {
+        data: { user }
+    } = await db.auth.getUser();
+
+    if (user) {
+
+        document.getElementById("loginArea")
+            .innerHTML = `
+                ${user.email}
+                <button onclick="logout()">
+                    로그아웃
+                </button>
+            `;
+
+    } else {
+
+        document.getElementById("loginArea")
+            .innerHTML = `
+                <a href="login.html">
+                    로그인
+                </a>
+            `;
+    }
+}
