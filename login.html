@@ -26,3 +26,8 @@ async function login() {
 
     location.href = "index.html";
 }
+
+async function logout() {
+    await db.auth.signOut();
+    location.href = "index.html";
+}
