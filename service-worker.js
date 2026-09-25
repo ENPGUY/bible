@@ -1,11 +1,9 @@
-const CACHE_NAME = "bible-app-v1";
+const CACHE_NAME = "bible-pwa-v1";
 
 const urlsToCache = [
-  "/bible/",
-  "/bible/index.html",
-  "/bible/manifest.json",
-  "/bible/icon-192.png",
-  "/bible/icon-512.png"
+  "./",
+  "./index.html",
+  "./manifest.json"
 ];
 
 self.addEventListener("install", event => {
